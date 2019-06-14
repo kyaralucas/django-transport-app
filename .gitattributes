@@ -1,2 +1,2 @@
-venv/*
-templates/*
+* linguist-vendored
+*.py linguist-vendored=false
