@@ -1,0 +1,71 @@
+{% load static %}
+{% load leaflet_tags %}
+
+{% leaflet_js %}
+{% leaflet_css %}
+
+<link rel="stylesheet" href="{% static 'bus_app/semantic.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5999</title>
+</head>
+<body>
+<div class="ui bottom attached segment pushable">
+
+
+  <div class="ui visible left secondary vertical sidebar menu">
+
+      <a class="item">
+          <h2>Bus Korsou</h2>
+
+    <div class="ui action inverted input">
+      <input type="text" placeholder="Type an address..">
+      <div class="ui button">Go</div>
+    </div>
+
+</a>
+{#          <button class="fluid ui button">#}
+{#  Use current location#}
+{#</button>#}
+
+
+  </div>
+
+
+
+  <div class="pusher">
+    <div class="ui basic segment">
+{#      <h3 class="ui header">Map content</h3>#}
+        {% leaflet_map "main" callback="main_map_init" %}
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+    <script type="text/javascript">
+        function main_map_init (map, options) {
+            // Use Leaflet API here
+        }
+    </script>
+
+<style>
+
+    .leaflet-container {  /* all maps */
+        width:  100%;
+        height: 100%;
+    }
+
+
+</style>
+
+
+</html>
